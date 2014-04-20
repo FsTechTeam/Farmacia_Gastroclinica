@@ -181,12 +181,12 @@ public class Ventas extends javax.swing.JFrame {
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         label11 = new java.awt.Label();
         label10 = new java.awt.Label();
-        jLabel4 = new javax.swing.JLabel();
         label2 = new java.awt.Label();
         TextNit1 = new java.awt.Label();
         label4 = new java.awt.Label();
         TextNit2 = new java.awt.Label();
         label12 = new java.awt.Label();
+        jButton2 = new javax.swing.JButton();
 
         popupMenu1.setLabel("popupMenu1");
 
@@ -313,17 +313,6 @@ public class Ventas extends javax.swing.JFrame {
         label10.setText("VENTAS");
         getContentPane().add(label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/shopping-cart-accept-icon.png"))); // NOI18N
-        jLabel4.setText("Pagar");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
-        jLabel4.setName("pagar"); // NOI18N
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 180, 120, 60));
-
         label2.setFont(new java.awt.Font("Lao MN", 2, 18)); // NOI18N
         label2.setText("Serie");
         getContentPane().add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
@@ -345,6 +334,15 @@ public class Ventas extends javax.swing.JFrame {
         label12.setFont(new java.awt.Font("Lao MN", 0, 18)); // NOI18N
         label12.setText("Total");
         getContentPane().add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 480, -1, -1));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/shopping-cart-accept-icon.png"))); // NOI18N
+        jButton2.setText("Pagar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 130, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -418,16 +416,10 @@ public class Ventas extends javax.swing.JFrame {
         
     }//GEN-LAST:event_button1ActionPerformed
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here: Pagar
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
         insertarFactura();
-        
-       
-        
-        
-        
-
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -471,10 +463,10 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JTextField TextNombre;
     private java.awt.Button button1;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private java.awt.Label label1;
     private java.awt.Label label10;

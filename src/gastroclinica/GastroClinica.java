@@ -6,6 +6,8 @@
 
 package gastroclinica;
 
+import org.jvnet.substance.SubstanceLookAndFeel;
+
 /**
  *
  * @author Pablo López
@@ -17,6 +19,14 @@ public class GastroClinica {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.EmeraldDuskSkin");
+        SubstanceLookAndFeel.setCurrentTheme("org.jvnet.substance.theme.SubstanceBottleGreenTheme");
+        SubstanceLookAndFeel.setCurrentWatermark("org.jvnet.substance.watermark.SubstanceBubblesWatermark");
+        SubstanceLookAndFeel.setCurrentWatermark("new SubstanceImageWatermark(“src//gastroclinica//Pencil-icon.png”)");
+        Login obj = new Login();
+        obj.show();
+        
+        
     }
     
 }

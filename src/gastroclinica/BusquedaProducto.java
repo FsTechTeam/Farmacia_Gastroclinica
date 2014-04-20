@@ -71,7 +71,7 @@ public class BusquedaProducto extends javax.swing.JFrame {
            }             
      }
     
-    void prueba(ArrayList<VentasT> lista1){
+    /*void prueba(ArrayList<VentasT> lista1){
         DefaultTableModel modelo1 = new DefaultTableModel();
         modelo1.addColumn("ID");
         modelo1.addColumn("NOMBRE");
@@ -92,7 +92,7 @@ public class BusquedaProducto extends javax.swing.JFrame {
         }
         
     
-    }
+    }*/
     void mostrarDatos(String texto){
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("ID");
@@ -164,15 +164,12 @@ public class BusquedaProducto extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         TextBusqueda = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         tbProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -205,11 +202,18 @@ public class BusquedaProducto extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbProductos);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(6, 110, 785, 280);
+
         jLabel2.setFont(new java.awt.Font("Seravek", 0, 13)); // NOI18N
         jLabel2.setText("INGRESA EL NOMBRE DEL PRODUCTO QUE ESTAS BUSCANDO . . .");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(57, 43, 377, 16);
 
         jLabel1.setFont(new java.awt.Font("Seravek", 0, 24)); // NOI18N
         jLabel1.setText("BUSQUEDA DE PRODUCTOS");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(16, 6, 292, 31);
 
         TextBusqueda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +225,8 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 TextBusquedaKeyPressed(evt);
             }
         });
+        getContentPane().add(TextBusqueda);
+        TextBusqueda.setBounds(10, 70, 387, 37);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/shopping-cart-insert-icon.png"))); // NOI18N
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -234,19 +240,8 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel3MouseMoved(evt);
             }
         });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable1);
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(820, 250, 60, 60);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/shopping-cart-accept-icon.png"))); // NOI18N
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -260,6 +255,8 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel4MouseMoved(evt);
             }
         });
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(820, 320, 60, 60);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/Close-2-icon.png"))); // NOI18N
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -273,6 +270,8 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel5MouseMoved(evt);
             }
         });
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(820, 180, 60, 60);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/Pencil-icon.png"))); // NOI18N
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -289,116 +288,8 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel6MouseMoved(evt);
             }
         });
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/Actions-view-pim-tasks-icon.png"))); // NOI18N
-        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jLabel8MouseReleased(evt);
-            }
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
-        jLabel8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jLabel8MouseMoved(evt);
-            }
-        });
-        jLabel8.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jLabel8FocusGained(evt);
-            }
-        });
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/Actions-view-pim-tasks-icon.png"))); // NOI18N
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jLabel9MouseReleased(evt);
-            }
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
-        jLabel9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jLabel9MouseMoved(evt);
-            }
-        });
-        jLabel9.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jLabel9FocusGained(evt);
-            }
-        });
-
-        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 785, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(29, 29, 29)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(layout.createSequentialGroup()
-                        .add(20, 20, 20)
-                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 780, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(layout.createSequentialGroup()
-                        .add(16, 16, 16)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel1)
-                            .add(layout.createSequentialGroup()
-                                .add(41, 41, 41)
-                                .add(jLabel2))
-                            .add(TextBusqueda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 387, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(71, 71, 71)
-                        .add(jLabel8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(760, Short.MAX_VALUE)
-                    .add(jLabel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(76, 76, 76)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(6, 6, 6)
-                        .add(jLabel1)
-                        .add(6, 6, 6)
-                        .add(jLabel2)
-                        .add(14, 14, 14)
-                        .add(TextBusqueda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(layout.createSequentialGroup()
-                        .add(20, 20, 20)
-                        .add(jLabel8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 280, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(layout.createSequentialGroup()
-                        .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(10, 10, 10)
-                        .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(10, 10, 10)
-                        .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(10, 10, 10)
-                        .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(10, 10, 10)
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 70, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                .add(layout.createSequentialGroup()
-                    .add(60, 60, 60)
-                    .add(jLabel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(350, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(820, 110, 60, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -475,7 +366,7 @@ public class BusquedaProducto extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,"Se ha añadido Correctamente"); 
         jLabel3.setText(String.valueOf(contProductosCar)); 
        
-        prueba(lista);
+       // prueba(lista);
         
         
     }//GEN-LAST:event_jLabel3MouseClicked
@@ -525,38 +416,6 @@ public class BusquedaProducto extends javax.swing.JFrame {
         jLabel4.setToolTipText("Facturar");
     }//GEN-LAST:event_jLabel4MouseMoved
 
-    private void jLabel8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8MouseReleased
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8MouseClicked
-
-    private void jLabel8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8MouseMoved
-
-    private void jLabel8FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel8FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8FocusGained
-
-    private void jLabel9MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseReleased
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseClicked
-
-    private void jLabel9MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9MouseMoved
-
-    private void jLabel9FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel9FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel9FocusGained
-
     /**
      * @param args the command line arguments
      */
@@ -599,11 +458,7 @@ public class BusquedaProducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable tbProductos;
     // End of variables declaration//GEN-END:variables
 }

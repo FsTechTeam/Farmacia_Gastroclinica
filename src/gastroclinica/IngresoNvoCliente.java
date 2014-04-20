@@ -54,20 +54,37 @@ public class IngresoNvoCliente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ingreso Clientes");
+        getContentPane().setLayout(null);
 
         TextNit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextNitActionPerformed(evt);
             }
         });
+        getContentPane().add(TextNit);
+        TextNit.setBounds(112, 107, 189, 37);
 
         jLabel1.setText("N.I.T.:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(56, 117, 38, 16);
+        getContentPane().add(TextNombre);
+        TextNombre.setBounds(112, 156, 189, 37);
 
         jLabel2.setText("Nombre:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 166, 54, 16);
+        getContentPane().add(TextApellido);
+        TextApellido.setBounds(112, 205, 189, 37);
 
         jLabel3.setText("Apellido:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(38, 215, 56, 16);
+        getContentPane().add(TextDireccion);
+        TextDireccion.setBounds(112, 254, 189, 37);
 
         jLabel4.setText("Dirección:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 264, 64, 16);
 
         GuardarClientes.setText("Guardar");
         GuardarClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +92,8 @@ public class IngresoNvoCliente extends javax.swing.JFrame {
                 GuardarClientesActionPerformed(evt);
             }
         });
+        getContentPane().add(GuardarClientes);
+        GuardarClientes.setBounds(61, 309, 93, 29);
 
         CancelButton.setText("Cancelar");
         CancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -82,80 +101,17 @@ public class IngresoNvoCliente extends javax.swing.JFrame {
                 CancelButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(CancelButton);
+        CancelButton.setBounds(203, 309, 98, 29);
 
         jLabel5.setFont(new java.awt.Font("Seravek", 0, 24)); // NOI18N
         jLabel5.setText("CLIENTES");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(6, 20, 98, 31);
 
         jLabel6.setText("AQUI PUEDES INGRESAR LOS DATOS DE TU CLIENTE . . .");
-
-        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .add(0, 0, Short.MAX_VALUE)
-                .add(GuardarClientes)
-                .add(49, 49, 49)
-                .add(CancelButton)
-                .add(72, 72, 72))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(layout.createSequentialGroup()
-                        .add(24, 24, 24)
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                                .add(layout.createSequentialGroup()
-                                    .add(jLabel2)
-                                    .add(18, 18, 18)
-                                    .add(TextNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(layout.createSequentialGroup()
-                                    .add(jLabel4)
-                                    .add(18, 18, 18)
-                                    .add(TextDireccion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(layout.createSequentialGroup()
-                                    .add(jLabel3)
-                                    .add(18, 18, 18)
-                                    .add(TextApellido, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                                .add(layout.createSequentialGroup()
-                                    .add(jLabel1)
-                                    .add(18, 18, 18)
-                                    .add(TextNit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 189, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                            .add(layout.createSequentialGroup()
-                                .add(26, 26, 26)
-                                .add(jLabel6))))
-                    .add(jLabel5))
-                .add(76, 76, 76))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .add(20, 20, 20)
-                .add(jLabel5)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 28, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 16, Short.MAX_VALUE)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(TextNit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel1))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(TextNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel2))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(TextApellido, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel3))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(TextDireccion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel4))
-                .add(18, 18, 18)
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(GuardarClientes)
-                    .add(CancelButton))
-                .add(21, 21, 21))
-        );
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(30, 57, 347, 28);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
