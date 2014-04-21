@@ -17,7 +17,7 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
-       JTextField jTextField1;
+        JTextField jTextField1;
         jTextField1 = new JTextFieldHint(new JTextField(),"Close-2-icon","Username");
     }
 

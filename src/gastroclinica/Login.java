@@ -36,7 +36,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         establecerConexion();
-        jTextField1 = new JTextFieldHint(new JTextField(),"Close-2-icon","Username");
+        //jTextField1 = new JTextFieldHint(new JTextField(),"Close-2-icon","Username");
         //JTextField passwordField = new JTextFieldHint(new JPasswordField(),"Close-2-icon","Password");
         this.jButton1.putClientProperty( SubstanceLookAndFeel.BUTTON_SHAPER_PROPERTY, new org.jvnet.substance.button.StandardButtonShaper());
     }
@@ -64,11 +64,10 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        jLabel1.setFont(new java.awt.Font("STHeiti", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("STHeiti", 0, 24)); // NOI18N
         jLabel1.setText("Iniciar sesion en Farmacia");
 
         jPasswordField1.setBackground(javax.swing.UIManager.getDefaults().getColor("Label.disabledShadow"));
-        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyPressed(evt);
@@ -76,7 +75,6 @@ public class Login extends javax.swing.JFrame {
         });
 
         jTextField1.setBackground(javax.swing.UIManager.getDefaults().getColor("Label.disabledShadow"));
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -130,27 +128,27 @@ public class Login extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(73, 73, 73)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
         );
 
         pack();

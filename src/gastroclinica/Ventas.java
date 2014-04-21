@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JRException;
 
 /**
  *
@@ -36,6 +37,7 @@ public class Ventas extends javax.swing.JFrame {
     int cliente_id = 1;
     int usuario_id;
     String fecha;
+    reporteFactura reporte;
     
     public Ventas() {
         
@@ -98,7 +100,7 @@ public class Ventas extends javax.swing.JFrame {
     //Fin funcion principal
     
     //Insertar Factura
-    public void insertarFactura(){
+    public void insertarFactura() throws JRException{
         PreparedStatement pst;
         try {
             pst = conexion.prepareStatement("insert into Factura(Fecha, Total, Numero, Serie, Cliente_id, Usuario_id) values(?,?,?,?,?,?)");
@@ -111,6 +113,10 @@ public class Ventas extends javax.swing.JFrame {
                 pst.execute();
                 insertarDetalle();
                 JOptionPane.showMessageDialog(null,"FACTURA OK");
+                reporte = new reporteFactura(conexion, idFactura);
+                reporte.imprimirReporte(idFactura);
+                JOptionPane.showMessageDialog(null,"reporte");
+                
             
         } catch (SQLException ex) {
             Logger.getLogger(Ventas.class.getName()).log(Level.SEVERE, null, ex);
@@ -417,8 +423,13 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_button1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        insertarFactura();
+        try {
+            // TODO add your handling code here:
+            insertarFactura();
+        } catch (JRException ex) {
+            Logger.getLogger(Ventas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

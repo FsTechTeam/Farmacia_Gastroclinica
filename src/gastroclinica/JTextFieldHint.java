@@ -30,12 +30,12 @@ private Insets dummyInsets;
 
 public JTextFieldHint(JTextField jtf, String icon, String hint){
     this.jtf = jtf;
-    setIcon(createImageIcon("/Users/Geek/NetBeansProjects/Farmacia_Gastroclinica/src/gastroclinica"+icon+".png",icon));
+    setIcon(createImageIcon("/Users/Geek/NetBeansProjects/Farmacia_Gastroclinica/src/gastroclinica/"+icon+".png",icon));
     this.hint = hint;
 
-    Border border = UIManager.getBorder("TextField.border");
+    /*Border border = UIManager.getBorder("TextField.border");
     JTextField dummy = new JTextField();
-    this.dummyInsets = border.getBorderInsets(dummy);
+    this.dummyInsets = border.getBorderInsets(dummy);*/
 
     addFocusListener(this);
 }

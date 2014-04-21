@@ -71,7 +71,7 @@ public class BusquedaProducto extends javax.swing.JFrame {
            }             
      }
     
-    /*void prueba(ArrayList<VentasT> lista1){
+    void prueba(ArrayList<VentasT> lista1){
         DefaultTableModel modelo1 = new DefaultTableModel();
         modelo1.addColumn("ID");
         modelo1.addColumn("NOMBRE");
@@ -92,7 +92,7 @@ public class BusquedaProducto extends javax.swing.JFrame {
         }
         
     
-    }*/
+    }
     void mostrarDatos(String texto){
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("ID");
@@ -167,9 +167,10 @@ public class BusquedaProducto extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
         tbProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -202,18 +203,11 @@ public class BusquedaProducto extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbProductos);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(6, 110, 785, 280);
-
         jLabel2.setFont(new java.awt.Font("Seravek", 0, 13)); // NOI18N
         jLabel2.setText("INGRESA EL NOMBRE DEL PRODUCTO QUE ESTAS BUSCANDO . . .");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(57, 43, 377, 16);
 
         jLabel1.setFont(new java.awt.Font("Seravek", 0, 24)); // NOI18N
         jLabel1.setText("BUSQUEDA DE PRODUCTOS");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(16, 6, 292, 31);
 
         TextBusqueda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,8 +219,6 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 TextBusquedaKeyPressed(evt);
             }
         });
-        getContentPane().add(TextBusqueda);
-        TextBusqueda.setBounds(10, 70, 387, 37);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/shopping-cart-insert-icon.png"))); // NOI18N
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -240,8 +232,6 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel3MouseMoved(evt);
             }
         });
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(820, 250, 60, 60);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/shopping-cart-accept-icon.png"))); // NOI18N
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -255,8 +245,6 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel4MouseMoved(evt);
             }
         });
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(820, 320, 60, 60);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/Close-2-icon.png"))); // NOI18N
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -270,8 +258,6 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel5MouseMoved(evt);
             }
         });
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(820, 180, 60, 60);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gastroclinica/Pencil-icon.png"))); // NOI18N
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 204, 255)));
@@ -288,8 +274,73 @@ public class BusquedaProducto extends javax.swing.JFrame {
                 jLabel6MouseMoved(evt);
             }
         });
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(820, 110, 60, 60);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(16, 16, 16)
+                        .add(jLabel1))
+                    .add(layout.createSequentialGroup()
+                        .add(57, 57, 57)
+                        .add(jLabel2))
+                    .add(layout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 785, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(layout.createSequentialGroup()
+                                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 785, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(18, 18, 18)
+                                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                    .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                            .add(TextBusqueda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 387, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(layout.createSequentialGroup()
+                .add(6, 6, 6)
+                .add(jLabel1)
+                .add(6, 6, 6)
+                .add(jLabel2)
+                .add(11, 11, 11)
+                .add(TextBusqueda, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 37, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createSequentialGroup()
+                        .add(3, 3, 3)
+                        .add(jLabel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(10, 10, 10)
+                        .add(jLabel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(10, 10, 10)
+                        .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(10, 10, 10)
+                        .add(jLabel4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 60, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(layout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 280, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(18, 18, 18)
+                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -459,6 +510,8 @@ public class BusquedaProducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable tbProductos;
     // End of variables declaration//GEN-END:variables
 }
